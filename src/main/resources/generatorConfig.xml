@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org">
+<generatorConfiguration>
+    <context id="MySqlContext" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.1.176:3306/levmin"
+                        userId="root"
+                        password="Zy5201ljf&amp;">
+        </jdbcConnection>
+
+        <!-- 生成模型路径 -->
+        <javaModelGenerator targetPackage="com.levmin.nginxtest.entry" targetProject="src/main/java"/>
+        <!-- 生成 XML 映射文件路径 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+        <!-- 生成 Mapper 接口路径 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.levmin.nginxtest.mapper" targetProject="src/main/java"/>
+
+        <!-- 指定数据库表 -->
+        <table tableName="user_account" domainObjectName="UserAccount"/>
+    </context>
+</generatorConfiguration>
