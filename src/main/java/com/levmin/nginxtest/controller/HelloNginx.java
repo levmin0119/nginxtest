@@ -15,6 +15,7 @@ public class HelloNginx {
 
     @GetMapping("/test")
     public String nginxTest() {
+        System.out.println("test github!!!");
         return ("nginx test" + port);
     }
 }
