@@ -45,11 +45,12 @@ public class JwtUtil {
      */
     public String getUserName(String token) {
         return Jwts.parser()
-                .verifyWith(getKey())        // ✅ 必须用同一个 SecretKey
+                .verifyWith(getKey())
                 .build()
-                .parseSignedClaims(token)    // ✅ 新 API
+                .parseSignedClaims(token)
                 .getPayload()
                 .getSubject();
     }
+
 
 }
